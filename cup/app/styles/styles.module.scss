@@ -1,0 +1,17 @@
+//   body {
+//     background-color: #2dd470;
+//   }
+  
+  .hello {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    font-family: "Righteous", cursive;
+  }
+  
+  
+  

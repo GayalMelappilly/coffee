@@ -2,4 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes vibrate-3-normal {0% { transform: translate(0); } 10% { transform: translate(-2px, -2px); } 20% { transform: translate(2px, -2px); } 30% { transform: translate(-2px, 2px); } 40% { transform: translate(2px, 2px); } 50% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, -2px); } 70% { transform: translate(-2px, 2px); } 80% { transform: translate(-2px, -2px); } 90% { transform: translate(2px, -2px); } 100% { transform: translate(0);} }
 
+.vibrate-3-normal { 
+    animation: vibrate-3-normal 1.5s ease-in 0s infinite normal none; 
+}
+
+.text-shadow-lg {
+  text-shadow: 6px 6px 0px rgba(255, 255, 255, 0.493);
+}
+
+.text-shadow-sm {
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.493);
+}
