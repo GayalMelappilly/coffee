@@ -51,7 +51,7 @@ const User = ({
         alignItems: "center",
         justifyContent: "center",
       }}
-      className="bg-sky-400 bg-opacity-30 rounded-md ml-5"
+      className="bg-sky-400 bg-opacity-30 h-8 sm:h-12 size-10 sm:size-12 rounded-md ml-3 sm:ml-5"
       onMouseEnter={() => controls.start("animate")}
       onMouseLeave={() => controls.start("normal")}
     >
