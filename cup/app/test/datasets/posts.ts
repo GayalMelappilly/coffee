@@ -45,9 +45,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "john_doe",
-                comment: "Great introduction!",
-                timestamp: "2023-04-01T12:00:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -102,9 +247,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "alice_wonder",
-                comment: "Very insightful!",
-                timestamp: "2023-04-02T14:30:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -159,9 +449,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "crypto_enthusiast",
-                comment: "Great explanation!",
-                timestamp: "2023-04-03T09:15:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -216,9 +651,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "dev_guru",
-                comment: "Very helpful for beginners!",
-                timestamp: "2023-04-04T16:45:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -273,9 +853,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "sys_admin",
-                comment: "Excellent overview!",
-                timestamp: "2023-04-05T11:20:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -330,9 +1055,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "api_guy",
-                comment: "Great comparison with REST!",
-                timestamp: "2023-04-06T13:10:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -387,9 +1257,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "designer_101",
-                comment: "Very useful for layout design!",
-                timestamp: "2023-04-07T10:05:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -444,9 +1459,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "js_fan",
-                comment: "Great for beginners!",
-                timestamp: "2023-04-08T15:30:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {
@@ -501,9 +1661,154 @@ export const posts = [
         },
         comments: [
             {
-                user: "algo_expert",
-                comment: "Clear and concise explanation!",
-                timestamp: "2023-04-09T09:45:00Z"
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNLCqR9DrVOUk3XNOOJamk822VrR6OvjQi4Q&s",
+                user: "crypto_insider",
+                comment: "This breakdown was super helpful, thanks!",
+                timestamp: "2023-04-08T10:15:00Z",
+                likes: 12,
+                replies: [
+                    {
+                        user: "btc_hodler",
+                        comment: "Absolutely! Made things clear.",
+                        timestamp: "2023-04-08T11:00:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7bZ5byhX0Hxi9tffJ95GvCOZl0vk4TDd7w&s",
+                user: "defi_guru",
+                comment: "Interesting take on the topic!",
+                timestamp: "2023-04-09T15:30:00Z",
+                likes: 8,
+                replies: [
+                    {
+                        user: "altcoin_trader",
+                        comment: "Yep, learned something new today!",
+                        timestamp: "2023-04-09T16:00:00Z",
+                        likes: 3
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkp5VHfvNHP5W3dw89w3LSfQArza_L9N2kog&s",
+                user: "nft_creator",
+                comment: "Well explained! Would love to see more.",
+                timestamp: "2023-04-10T18:45:00Z",
+                likes: 15,
+                replies: [
+                    {
+                        user: "digital_collector",
+                        comment: "Same here! Love the insights.",
+                        timestamp: "2023-04-10T19:10:00Z",
+                        likes: 7
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWII85jFwVjGzhdL9xxoqnROQCvbJEWGz32Q&s",
+                user: "blockchain_dev",
+                comment: "Smart contract part was really insightful.",
+                timestamp: "2023-04-11T08:20:00Z",
+                likes: 22,
+                replies: [
+                    {
+                        user: "solidity_coder",
+                        comment: "Yes! It was explained very well.",
+                        timestamp: "2023-04-11T09:00:00Z",
+                        likes: 10
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo1AGzzaB0JsIh0kIcVL-XPe310wGo_tE1UQ&s",
+                user: "web3_pioneer",
+                comment: "A must-read for those new to Web3!",
+                timestamp: "2023-04-12T12:10:00Z",
+                likes: 30,
+                replies: [
+                    {
+                        user: "eth_maxi",
+                        comment: "Agreed! Solid breakdown of concepts.",
+                        timestamp: "2023-04-12T13:00:00Z",
+                        likes: 12
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSwGhrtGBSQd3tzwWRM88Nwu2onEZENT9zQA&s",
+                user: "dapp_builder",
+                comment: "This article just made my day!",
+                timestamp: "2023-04-13T14:50:00Z",
+                likes: 18,
+                replies: [
+                    {
+                        user: "smart_contracts101",
+                        comment: "Glad to hear that! It was great content.",
+                        timestamp: "2023-04-13T15:30:00Z",
+                        likes: 6
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwbFuq2n6Tx9oV9NPePEJjtS8MDDfjP-fBiw&s",
+                user: "metaverse_enthusiast",
+                comment: "Metaverse applications were well explained!",
+                timestamp: "2023-04-14T20:30:00Z",
+                likes: 25,
+                replies: [
+                    {
+                        user: "vr_traveler",
+                        comment: "Right? Excited to see where this tech goes!",
+                        timestamp: "2023-04-14T21:10:00Z",
+                        likes: 9
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzstqxRca7XpboDRe744m3MqXZoh7s9hTkpA&s",
+                user: "defi_trader",
+                comment: "Looking forward to more deep dives!",
+                timestamp: "2023-04-15T09:05:00Z",
+                likes: 14,
+                replies: [
+                    {
+                        user: "crypto_strategist",
+                        comment: "Same! Loving the content so far.",
+                        timestamp: "2023-04-15T09:45:00Z",
+                        likes: 5
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTjzI-43Xeg6RlyQ5TAdrLo6ocSnoA7CHilA&s",
+                user: "solidity_dev",
+                comment: "Smart contract part was on point!",
+                timestamp: "2023-04-16T17:40:00Z",
+                likes: 19,
+                replies: [
+                    {
+                        user: "eth_coder",
+                        comment: "Yeah, I appreciated that section a lot!",
+                        timestamp: "2023-04-16T18:20:00Z",
+                        likes: 8
+                    }
+                ]
+            },
+            {
+                profile_img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq0Kyq4lnpz8_nveKJVkaHZWOlt6mmc8dArQ&s",
+                user: "tech_investor",
+                comment: "Great insights for long-term investors!",
+                timestamp: "2023-04-17T11:00:00Z",
+                likes: 21,
+                replies: [
+                    {
+                        user: "market_analyst",
+                        comment: "Definitely a must-read for investors.",
+                        timestamp: "2023-04-17T11:40:00Z",
+                        likes: 10
+                    }
+                ]
             }
         ],
         author: {

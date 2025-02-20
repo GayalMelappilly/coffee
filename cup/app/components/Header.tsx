@@ -6,16 +6,19 @@ import { BellRing } from './Icons/BellRing'
 import { User } from './Icons/User'
 import PublishButton from './Buttons/PublishButton'
 import SidePanel from './Home/SidePanel'
+import { useState } from 'react'
 
 type Props = {}
 
 const Header = (props: Props) => {
 
+    const [open, setOpen] = useState(false)
+
     return (
         <>
             <div className='flex my-5 w-screen'>
                 <div className='block sm:hidden'>
-                    <SidePanel />
+                    <SidePanel open={open} setOpen={setOpen} />
                 </div>
                 <Logo />
                 <div className='hidden sm:block w-2/5'>

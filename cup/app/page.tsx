@@ -1,18 +1,24 @@
+"use client"
+
 import Header from "./components/Header";
 import Banner from "./components/Banner/Banner";
 import Discussions from "./components/Home/Discussions";
 import Posts from "./components/Home/Posts";
 import SidePanel from "./components/Home/SidePanel";
+import { useState } from "react";
 
 
 export default function Home() {
+
+  const [open, setOpen] = useState(false)
+
   return (
     <>
       <Header />
       {/* <Banner /> */}
       <div className="flex">
         <div className="hidden sm:block sm:w-2/12">
-          <SidePanel />
+          <SidePanel open={open} setOpen={setOpen} />
         </div>
         <Posts />
       </div>

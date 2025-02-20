@@ -2,21 +2,102 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   overflow-x: hidden;
-  overflow-y: scroll;  /* Enables scrolling */
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  overflow-y: scroll;
+  /* Enables scrolling */
+  scrollbar-width: none;
+  /* Hides scrollbar in Firefox */
 }
 
 ::-webkit-scrollbar {
-  width: 0px; /* Hides scrollbar */
-  background: transparent; /* Optional: Makes scrollbar fully invisible */
+  width: 0px;
+  /* Hides scrollbar */
+  background: transparent;
+  /* Optional: Makes scrollbar fully invisible */
 }
 
-@keyframes vibrate-3-normal {0% { transform: translate(0); } 10% { transform: translate(-2px, -2px); } 20% { transform: translate(2px, -2px); } 30% { transform: translate(-2px, 2px); } 40% { transform: translate(2px, 2px); } 50% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, -2px); } 70% { transform: translate(-2px, 2px); } 80% { transform: translate(-2px, -2px); } 90% { transform: translate(2px, -2px); } 100% { transform: translate(0);} }
+@keyframes vibrate-3-normal {
+  0% {
+    transform: translate(0);
+  }
 
-.vibrate-3-normal { 
-    animation: vibrate-3-normal 1.5s ease-in 0s infinite normal none; 
+  10% {
+    transform: translate(-2px, -2px);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  30% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  50% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, -2px);
+  }
+
+  70% {
+    transform: translate(-2px, 2px);
+  }
+
+  80% {
+    transform: translate(-2px, -2px);
+  }
+
+  90% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.vibrate-3-normal {
+  animation: vibrate-3-normal 1.5s ease-in 0s infinite normal none;
+}
+
+@keyframes fade-in-left-normal {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in-left-normal {
+  animation: fade-in-left-normal 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
+}
+
+@keyframes fade-in-right-normal {
+  0% {
+    transform: translateX(0px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(-100);
+    opacity: 1;
+  }
+}
+
+.fade-in-right-normal {
+  animation: fade-in-right-normal 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0s 1 normal both;
 }
 
 .text-shadow-lg {
