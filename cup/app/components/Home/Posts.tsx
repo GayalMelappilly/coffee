@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { FC, useEffect, useState } from 'react'
 import { posts } from '../../test/datasets/posts'
 import { Roboto, Unkempt } from 'next/font/google'
 import { format } from 'timeago.js'
@@ -25,14 +25,20 @@ const unkempt = Unkempt({
   subsets: ['latin']
 })
 
-type Props = {}
+type Props = {
+  sidePanelOpen: boolean
+}
 
-const Posts = (props: Props) => {
+const Posts: FC<Props> = ({ sidePanelOpen }) =>  {
+
+  useEffect(() => {
+    console.log(sidePanelOpen)
+  }, [sidePanelOpen])
 
   const [showAll, setShowAll] = useState(false)
 
   return (
-    <div className='w-full sm:w-6/12 h-fit mt-6 sm:ml-14 sm:mt-10 px-5'>
+    <div className={`w-full sm:w-6/12 h-fit mt-6 sm:ml-14 sm:mt-10 px-5`}>
       {posts.map((post) => (
         <div className='bg-white mb-5 rounded-md p-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
           <div className='profile-section flex gap-3 mb-5'>

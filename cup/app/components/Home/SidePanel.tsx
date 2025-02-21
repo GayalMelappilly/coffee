@@ -68,18 +68,6 @@ const sections = [
 
 const SidePanel: FC<Props> = ({ open, setOpen }) => {
 
-    useEffect(() => {
-        if (open) {
-          document.body.style.overflow = "hidden"; // Disable scrolling on the entire page
-        } else {
-          document.body.style.overflow = "auto"; // Enable scrolling back
-        }
-    
-        return () => {
-          document.body.style.overflow = "auto"; // Reset on unmount
-        };
-      }, [open]);
-
     return (
         <>
             <div className='mx-10 mt-10 w-full hidden sm:block bg-white bg-opacity-30 p-2 rounded-md'>
@@ -101,7 +89,7 @@ const SidePanel: FC<Props> = ({ open, setOpen }) => {
             </button>
 
             {open && (
-                <div id="dropdownHover" className="z-10 fixed top-0 sm:hidden w-full h-full overflow-auto  backdrop-blur-[5px]">
+                <div id="dropdownHover" className="z-10 fixed top-0 sm:hidden w-full h-full overflow-auto flex backdrop-blur-[5px]">
                     <div className={`w-8/12 backdrop-blur-xl bg-zinc-100 h-fit ${open ? 'fade-in-left-normal' : 'fade-in-right-normal'} shadow-[7px_0px_22px_0px_rgba(0,_0,_0,_0.2)]`}>
                         <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
                             {sections.map((section) => (
@@ -111,7 +99,7 @@ const SidePanel: FC<Props> = ({ open, setOpen }) => {
                             ))}
                         </ul>
                     </div>
-                    <div className='w-4/12' onClick={() => setOpen(!open)}></div>
+                    <div className='w-4/12 h-full' onClick={() => setOpen(!open)}></div>
                 </div>
             )}
 
