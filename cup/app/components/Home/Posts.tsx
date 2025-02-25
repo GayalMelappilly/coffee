@@ -57,7 +57,7 @@ const Posts = () => {
             </div>
             {post.cover_image && (
               <div className='mb-5'>
-                <img src={post.cover_image} className='w-10/12 mx-auto rounded-md' alt="" />
+                <Image src={post.cover_image} width={200} height={100} className='w-10/12 mx-auto rounded-md' alt="" />
               </div>
             )}
             <h1 className={`ml-6 sm:ml-14 text-xl sm:text-3xl ${roboto.className}`}>{post.title}</h1>

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const SearchBar = (props: Props) => {
+const SearchBar = () => {
     return (
         <form className=" sm:ml-5">
             <div className="relative flex justify-center sm:flex-none sm:justify-normal">
