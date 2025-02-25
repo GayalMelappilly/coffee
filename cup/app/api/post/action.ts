@@ -29,6 +29,6 @@ export type TypePost = {
     };
     topics: [key: string];
     published_at: string | null;
-    created_at: string; // ISO date string
-    updated_at: string; // ISO date string
+    created_at: string; 
+    updated_at: string; 
 };
