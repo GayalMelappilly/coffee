@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Header from "./components/Header";
 import Banner from "./components/Banner/Banner";
@@ -11,10 +11,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
 
   const [open, setOpen] = useState(false)
-
-  useEffect(()=>{
-    console.log("CON : ", open)
-  })
+  
 
   return (
     <>
@@ -22,8 +19,8 @@ export default function Home() {
         <div className="hidden sm:block sm:w-2/12">
           <SidePanel open={open} setOpen={setOpen} />
         </div>
-        <Posts sidePanelOpen={open} />
-      </div>
+        <Posts />
+      </div> 
       {/* <Discussions /> */}
     </>
   );

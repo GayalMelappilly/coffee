@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Background from "./components/Background/Background";
 import Header from "./components/Header";
+import QueryProvider from "./providers/QueryProvider";
 
 export const metadata: Metadata = {
   title: "",
@@ -18,9 +19,11 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        <Background />
-        <Header />
-        {children}
+        <QueryProvider>
+          <Background />
+          <Header />
+          {children}
+        </QueryProvider>
       </body>
     </html>
   );

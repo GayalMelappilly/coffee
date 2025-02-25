@@ -7,12 +7,15 @@ import { User } from './Icons/User'
 import PublishButton from './Buttons/PublishButton'
 import SidePanel from './Home/SidePanel'
 import { useState } from 'react'
+import Link from 'next/link'
+import Notification from './Notification/Notification'
 
 type Props = {}
 
 const Header = (props: Props) => {
 
     const [open, setOpen] = useState(false)
+    const [openNotifications, setOpenNotifications] = useState(false)
 
     return (
         <>
@@ -26,7 +29,12 @@ const Header = (props: Props) => {
                 </div>
                 <div className='ml-auto flex mx-2 sm:mx-20 sm:ml-auto'>
                     <PublishButton />
-                    <BellRing />
+                    <BellRing onClick={()=>setOpenNotifications(!openNotifications)} />
+                    { openNotifications && (
+                        <div className='flex justify-end'>
+                            <Notification />
+                        </div>
+                    ) }
                     <User />
                 </div>
             </div>
