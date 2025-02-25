@@ -4,14 +4,14 @@ import React from 'react'
 import { Bebas_Neue } from 'next/font/google'
 import Link from 'next/link'
 
-type Props = {}
+// type Props = {}
 
 const bebasNeue = Bebas_Neue({
     weight: "400",
     subsets: ["latin"]
 })
 
-const PublishButton = (props: Props) => {
+const PublishButton = () => {
     return (
         <div>
             <Link href={'/new-post'}>

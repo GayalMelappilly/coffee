@@ -2,9 +2,8 @@
 
 import React, { useRef } from 'react'
 import { Poppins } from "next/font/google";
-import { Code } from '../Icons/CodeIcon';
 
-type Props = {}
+// type Props = {}
 
 const poppins = Poppins({
     weight: "300",
@@ -12,7 +11,7 @@ const poppins = Poppins({
     subsets: ['latin']
 })
 
-const PostContent = (props: Props) => {
+const PostContent = () => {
 
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 

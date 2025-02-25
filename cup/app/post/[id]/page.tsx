@@ -4,9 +4,9 @@ import SidePanel from '@/app/components/Home/SidePanel';
 import { useParams } from 'next/navigation';
 import React, { useState } from 'react'
 
-type Props = {}
+// type Props = {}
 
-const page = (props: Props) => {
+const Page = () => {
 
     const params = useParams();
     const id = params?.id as string;
@@ -26,4 +26,4 @@ const page = (props: Props) => {
     )
 }
 
-export default page
+export default Page

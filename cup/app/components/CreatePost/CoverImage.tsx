@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const CoverImage = (props: Props) => {
+const CoverImage = () => {
     return (
         <div className='bg-white rounded-md p-10 h-[20.1rem] flex items-end ml-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
             <a href="#_" className="relative inline-flex items-center justify-center p-4 mx-5 px-24 py-1 overflow-hidden font-medium transition duration-300 ease-out border-1 border-red-500 rounded-md shadow-[inset_0px_2px_10px_1px_rgba(0,_0,_0,_0.2)] group">

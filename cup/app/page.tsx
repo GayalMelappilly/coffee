@@ -1,11 +1,8 @@
 'use client'
 
-import Header from "./components/Header";
-import Banner from "./components/Banner/Banner";
-import Discussions from "./components/Home/Discussions";
 import Posts from "./components/Home/Posts";
 import SidePanel from "./components/Home/SidePanel";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 export default function Home() {

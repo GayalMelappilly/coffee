@@ -7,9 +7,9 @@ const amaranth = Amaranth({
     subsets: ["latin"]
 })
 
-type Props = {}
+// type Props = {}
 
-const Logo = (props: Props) => {
+const Logo = () => {
     return (
         <Link href={'/'}>
             <div className={`bg-gradient-to-r from-[#25a55f] to-[#2dd470] h-8 sm:h-12 w-24 sm:w-36 ml-3 sm:ml-10 flex items-center justify-center rounded-md pointer-events-none select-none`}>

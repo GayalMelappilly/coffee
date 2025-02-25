@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { Poppins } from "next/font/google";
 import { Hashtags } from '@/app/test/datasets/hashtags';
 
-type Props = {}
+// type Props = {}
 
 const poppins = Poppins({
     weight: "900",
@@ -18,7 +18,7 @@ const poppins_sm = Poppins({
     subsets: ['latin']
 })
 
-const PostTitle = (props: Props) => {
+const PostTitle = () => {
 
     const [tags, setTags] = useState<string[]>([])
     const [searchTag, setSearchTag] = useState("")
@@ -28,14 +28,14 @@ const PostTitle = (props: Props) => {
 
     useEffect(() => {
         const search: string = searchTag.toLowerCase()
-        var matchingTags: any = []
+        let matchingTags: string[] = []
         if (search != "") {
             matchingTags = hashtags.filter(hashtag =>
                 hashtag.toLowerCase().includes(search)
             )
         }
         setTags(matchingTags)
-    }, [searchTag])
+    }, [searchTag, hashtags])
 
     const userTags = (tag: string, command: string) => {
         if (command == "add") {
@@ -53,8 +53,8 @@ const PostTitle = (props: Props) => {
                 <div className='flex p-5 pl-10 pb-5'>
                     {selectedTags.length > 0 && (
                         <div className='flex gap-4 py-2'>
-                            {selectedTags.map((tags) => (
-                                <p className='bg-pink-500 text-pink-600 hover:scale-105 duration-300 bg-opacity-20 px-1 h-fit rounded-md text-lg cursor-pointer flex'>{tags}
+                            {selectedTags.map((tags, index) => (
+                                <p key={index} className='bg-pink-500 text-pink-600 hover:scale-105 duration-300 bg-opacity-20 px-1 h-fit rounded-md text-lg cursor-pointer flex'>{tags}
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="15" height="15" viewBox="0 0 24 24" fill='#E91E63' className='mt-2 ml-2 hover:scale-125 duration-300' onClick={() => userTags(tags,"remove")}>
                                         <path d="M 4.9902344 3.9902344 A 1.0001 1.0001 0 0 0 4.2929688 5.7070312 L 10.585938 12 L 4.2929688 18.292969 A 1.0001 1.0001 0 1 0 5.7070312 19.707031 L 12 13.414062 L 18.292969 19.707031 A 1.0001 1.0001 0 1 0 19.707031 18.292969 L 13.414062 12 L 19.707031 5.7070312 A 1.0001 1.0001 0 0 0 18.980469 3.9902344 A 1.0001 1.0001 0 0 0 18.292969 4.2929688 L 12 10.585938 L 5.7070312 4.2929688 A 1.0001 1.0001 0 0 0 4.9902344 3.9902344 z"></path>
                                     </svg>
@@ -68,7 +68,7 @@ const PostTitle = (props: Props) => {
                     <div className={`max-h-52 w-1/4 ml-10 overflow-y-auto p-2 px-5 pb-2 rounded-md list-none shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]`}>
                         <ul className=' divide-gray-300'>
                             {tags.map((tag, index) => (
-                                <li className='my-3 hover:bg-pink-500 hover:text-pink-600 hover:bg-opacity-20 px-1 rounded-md hover:w-fit' onClick={() => userTags(tag, "add")}>{tag}</li>
+                                <li key={index} className='my-3 hover:bg-pink-500 hover:text-pink-600 hover:bg-opacity-20 px-1 rounded-md hover:w-fit' onClick={() => userTags(tag, "add")}>{tag}</li>
                             ))}
                         </ul>
                     </div>

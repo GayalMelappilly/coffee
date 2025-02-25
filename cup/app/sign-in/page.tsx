@@ -4,9 +4,9 @@ import React from 'react'
 import Banner from '../components/Banner/Banner'
 import Login from '../components/Login/Login'
 
-type Props = {}
+// type Props = {}
 
-const page = (props: Props) => {
+const page = () => {
     return (
         <div className='flex'>
             <Login />

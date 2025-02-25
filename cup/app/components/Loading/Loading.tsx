@@ -1,11 +1,18 @@
+import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const Loading = (props: Props) => {
+const Loading = () => {
   return (
     <div className='flex items-center justify-center h-screen w-screen sm:w-7/12'>
-        <img src="/dino_loading.png" className='size-80 object-contain' alt="" />
+        <Image 
+          src={'/dino_loading.png'}
+          alt=''
+          height={300}
+          width={300}
+          className='object-contain'
+        />
     </div>
   )
 }

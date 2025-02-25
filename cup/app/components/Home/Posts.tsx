@@ -1,24 +1,20 @@
-import React, { FC, useEffect, useState } from 'react'
+import React from 'react'
 // import { posts } from '../../test/datasets/posts'
 import { Roboto, Unkempt } from 'next/font/google'
 import { format } from 'timeago.js'
 import { convertTime } from '@/app/utils/convertTime'
-import { ThumbsUp } from '../Icons/ThumbsUp'
+// import { ThumbsUp } from '../Icons/ThumbsUp'
 import { CgComment } from "react-icons/cg";
 import { BiLike } from "react-icons/bi";
 import { useQuery } from '@tanstack/react-query'
 import { getPosts, TypePost } from '@/app/api/post/action'
 import Link from 'next/link'
 import Loading from '../Loading/Loading'
+import Image from 'next/image'
 
 const roboto = Roboto({
   weight: "700",
   style: 'normal',
-  subsets: ['latin']
-})
-
-const roboto_regular = Roboto({
-  weight: "400",
   subsets: ['latin']
 })
 
@@ -27,11 +23,9 @@ const unkempt = Unkempt({
   subsets: ['latin']
 })
 
-type Props = {
+// type Props = {}
 
-}
-
-const Posts: FC<Props> = () => {
+const Posts = () => {
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ['posts'],
@@ -47,7 +41,13 @@ const Posts: FC<Props> = () => {
         <Link key={post.id} href={`/post/${post.id}`}>
           <div className='bg-white mb-5 rounded-md p-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)] hover:scale-[103%] duration-300'>
             <div className='profile-section flex gap-3 mb-5'>
-              <img src={post.author.avatar ? post.author.avatar : 'dino_avatar.jpg'} className='rounded-md size-8 sm:size-10' alt="" />
+              <Image 
+                src={post.author.avatar ? post.author.avatar : '/dino_avatar.jpg'} 
+                alt=''
+                width={80}
+                height={80}
+                className='rounded-md size-8 sm:size-10'
+              />
               <div className='-mt-0.5 sm:-mt-0'>
                 <Link href={`/profile/${post.author.username}`}>
                   <h2 className='text-sm sm:text-base hover:underline cursor-pointer'>{post.author.username}</h2>

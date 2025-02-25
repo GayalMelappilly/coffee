@@ -7,12 +7,12 @@ import { User } from './Icons/User'
 import PublishButton from './Buttons/PublishButton'
 import SidePanel from './Home/SidePanel'
 import { useState } from 'react'
-import Link from 'next/link'
+// import Link from 'next/link'
 import Notification from './Notification/Notification'
 
-type Props = {}
+// type Props = {}
 
-const Header = (props: Props) => {
+const Header = () => {
 
     const [open, setOpen] = useState(false)
     const [openNotifications, setOpenNotifications] = useState(false)

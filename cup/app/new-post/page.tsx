@@ -3,9 +3,9 @@ import PostTitle from '../components/CreatePost/PostTitle'
 import CoverImage from '../components/CreatePost/CoverImage'
 import PostContent from '../components/CreatePost/PostContent'
 
-type Props = {}
+// type Props = {}
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className='h-screen mt-14 justify-center px-10'>
       <div className='flex justify-center'>

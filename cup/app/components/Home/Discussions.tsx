@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const Discussions = (props: Props) => {
+const Discussions = () => {
   return (
     <div>discussions</div>
   )

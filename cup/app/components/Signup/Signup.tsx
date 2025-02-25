@@ -3,10 +3,11 @@
 import React from 'react'
 import SmallBanner from '../Banner/SmallBanner'
 import Link from 'next/link'
+import Image from 'next/image'
 
-type Props = {}
+// type Props = {}
 
-const Signup = (props: Props) => {
+const Signup = () => {
     return (
         <>
             <div className='sm:hidden h-20 absolute w-screen'>
@@ -69,8 +70,12 @@ const Signup = (props: Props) => {
                             Signup with Google
                         </button>
                         <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg hover:bg-gray-50 duration-150 active:bg-gray-100">
-                            <img src="X.svg" className='size-7' alt="" />
-                            Signup with X
+                            <Image
+                                src={'X.svg'}
+                                alt=''
+                                height={25}
+                                width={25}
+                            />
                         </button>
                         <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg hover:bg-gray-50 duration-150 active:bg-gray-100">
                             <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +99,7 @@ const Signup = (props: Props) => {
                         </button>
                     </div>
                     <div className="text-center">
-                        <a href="javascript:void(0)" className="text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+                        <Link href="javascript:void(0)" className="text-indigo-600 hover:text-indigo-500">Forgot password?</Link>
                     </div>
                 </div>
             </main>

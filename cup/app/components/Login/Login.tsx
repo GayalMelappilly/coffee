@@ -1,9 +1,10 @@
 'use client'
 
 import React from 'react'
-import Logo from '../Logo/Logo'
+// import Logo from '../Logo/Logo'
 import SmallBanner from '../Banner/SmallBanner'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type Props = {}
 
@@ -62,7 +63,12 @@ const Login = (props: Props) => {
                             Continue with Google
                         </button>
                         <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg hover:bg-gray-50 duration-150 active:bg-gray-100">
-                            <img src="X.svg" className='size-7' alt="" />
+                            <Image
+                                src={'X.svg'}
+                                alt=''
+                                height={25}
+                                width={25}
+                            />
                             Continue with X
                         </button>
                         <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg hover:bg-gray-50 duration-150 active:bg-gray-100">
@@ -87,7 +93,7 @@ const Login = (props: Props) => {
                         </button>
                     </div>
                     <div className="text-center">
-                        <a href="javascript:void(0)" className="text-indigo-600 hover:text-indigo-500">Forgot password?</a>
+                        <Link href="javascript:void(0)" className="text-indigo-600 hover:text-indigo-500">Forgot password?</Link>
                     </div>
                 </div>
             </main>
