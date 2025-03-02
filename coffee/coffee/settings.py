@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,12 +25,32 @@ SECRET_KEY = "django-insecure-vdftddpohlh-iyota^purs4w=%rd_^7oj#o7eq9%8a@t*uz%+2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = [
+    "https://coffee-production-1aff.up.railway.app"
+]
+
+ALLOWED_HOSTS = [
+    "coffee-production-1aff.up.railway.app",
+    "127.0.0.1",
+    "localhost"
+]
+
+AUTH_USER_MODEL = 'users.User'
+
 
 
 # Application definition
 
 INSTALLED_APPS = [
+     #custom apps
+    'users',
+    'posts',
+    'comments',
+    'likes',
+    'feeds',
+    'topics',
+
+    
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -38,10 +58,28 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 
-    #custom apps
-    'posts'
+    'rest_framework',
+    "rest_framework_simplejwt",
+    'rest_framework_simplejwt.token_blacklist',
+
+    'corsheaders'
+
+   
 
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.SessionAuthentication'
+    ),
+}
+
+
+AUTH_USER_MODEL = "users.User"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -51,7 +89,16 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+        'whitenoise.middleware.WhiteNoiseMiddleware',
+         "corsheaders.middleware.CorsMiddleware"
 ]
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://hangout-six.vercel.app"
+]
+
 
 ROOT_URLCONF = "coffee.urls"
 
@@ -83,6 +130,7 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
 
 
 # Password validation
@@ -125,3 +173,6 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
