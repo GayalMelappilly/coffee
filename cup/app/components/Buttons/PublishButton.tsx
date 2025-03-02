@@ -1,15 +1,12 @@
 'use client'
 
 import React from 'react'
-import { Bebas_Neue } from 'next/font/google'
+import { bebasNeue } from '../Fonts/Fonts'
 import Link from 'next/link'
 
 // type Props = {}
 
-const bebasNeue = Bebas_Neue({
-    weight: "400",
-    subsets: ["latin"]
-})
+
 
 const PublishButton = () => {
     return (

@@ -12,6 +12,7 @@ const Loading = () => {
           height={300}
           width={300}
           className='object-contain'
+          priority
         />
     </div>
   )

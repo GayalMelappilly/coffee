@@ -3,6 +3,7 @@ import "./globals.css";
 import Background from "./components/Background/Background";
 import Header from "./components/Header";
 import QueryProvider from "./providers/QueryProvider";
+import { AuthProvider } from "./context/authProvider";
 
 export const metadata: Metadata = {
   title: "",
@@ -16,12 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`antialiased dark:bg-black`}>
         <Background />
-        <QueryProvider>
-          <Header />
-          {children}
-        </QueryProvider>
+        <AuthProvider>
+          <QueryProvider>
+            <Header />
+            {children}
+          </QueryProvider>
+        </AuthProvider>
       </body>
     </html>
   );

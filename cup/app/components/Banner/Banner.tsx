@@ -1,10 +1,5 @@
 import React from 'react'
-import { Amaranth } from "next/font/google";
-
-const amaranth = Amaranth({
-    weight: "700",
-    subsets: ["latin"]
-})
+import { amaranth } from '../Fonts/Fonts' 
 
 // type Props = {}
 

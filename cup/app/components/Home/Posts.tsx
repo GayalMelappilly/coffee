@@ -1,27 +1,15 @@
-import React from 'react'
-// import { posts } from '../../test/datasets/posts'
-import { Roboto, Unkempt } from 'next/font/google'
+import React, { Key } from 'react'
+import { robotoRegular, unkempt } from '../Fonts/Fonts'
 import { format } from 'timeago.js'
 import { convertTime } from '@/app/utils/convertTime'
-// import { ThumbsUp } from '../Icons/ThumbsUp'
 import { CgComment } from "react-icons/cg";
 import { BiLike } from "react-icons/bi";
 import { useQuery } from '@tanstack/react-query'
-import { getPosts, TypePost } from '@/app/api/post/action'
+import { getPosts, TypePost } from '@/pages/api/post/actions'
 import Link from 'next/link'
 import Loading from '../Loading/Loading'
 import Image from 'next/image'
 
-const roboto = Roboto({
-  weight: "700",
-  style: 'normal',
-  subsets: ['latin']
-})
-
-const unkempt = Unkempt({
-  weight: '700',
-  subsets: ['latin']
-})
 
 // type Props = {}
 
@@ -37,44 +25,44 @@ const Posts = () => {
 
   return (
     <div className={`w-full sm:w-6/12 h-fit mt-6 sm:ml-14 sm:mt-10 px-5`}>
-      {data?.map((post: TypePost) => (
-        <Link key={post.id} href={`/post/${post.id}`}>
-          <div className='bg-white mb-5 rounded-md p-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)] hover:scale-[103%] duration-300'>
-            <div className='profile-section flex gap-3 mb-5'>
-              <Image 
-                src={post.author.avatar ? post.author.avatar : '/dino_avatar.jpg'} 
-                alt=''
-                width={80}
-                height={80}
-                className='rounded-md size-8 sm:size-10'
-              />
-              <div className='-mt-0.5 sm:-mt-0'>
-                <Link href={`/profile/${post.author.username}`}>
-                  <h2 className='text-sm sm:text-base hover:underline cursor-pointer'>{post.author.username}</h2>
-                </Link>
-                <p className='text-xs text-zinc-800 opacity-90'>{`${convertTime(post.created_at)} (${format(post.created_at)})`}</p>
-              </div>
+      {data?.map((post: TypePost, index: Key) => (
+        <div key={index} className='bg-white dark:bg-zinc-900 mb-5 rounded-md p-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)] hover:scale-[103%] duration-300'>
+          <div className='profile-section flex gap-3 mb-5'>
+            <Image
+              src={post.author.avatar ? post.author.avatar : '/dino_avatar.jpg'}
+              alt=''
+              width={80}
+              height={80}
+              className='rounded-md size-8 sm:size-10'
+            />
+            <div className='-mt-0.5 sm:-mt-0'>
+              <Link href={`/profile/${post.author.username}`}>
+                <h2 className='text-sm sm:text-base hover:underline cursor-pointer dark:text-zinc-200'>{post.author.username}</h2>
+              </Link>
+              <p className='text-xs text-zinc-800 opacity-90 dark:text-zinc-200'>{`${convertTime(post.created_at)} (${format(post.created_at)})`}</p>
             </div>
+          </div>
+          <Link key={post.id} href={`/post/${post.id}`}>
             {post.cover_image && (
               <div className='mb-5'>
                 <Image src={post.cover_image} width={200} height={100} className='w-10/12 mx-auto rounded-md' alt="" />
               </div>
             )}
-            <h1 className={`ml-6 sm:ml-14 text-xl sm:text-3xl ${roboto.className}`}>{post.title}</h1>
-            <div className='flex sm:gap-2 ml-5 sm:ml-14 my-1 mb-3'>
+            <h1 className={`ml-6 sm:ml-14 text-xl sm:text-3xl dark:text-zinc-200 ${robotoRegular.className}`}>{post.title}</h1>
+            {/* <div className='flex sm:gap-2 ml-5 sm:ml-14 my-1 mb-3'> */}
               {/* {post.tags.map((tag) => (
               <p className='text-zinc-600 text-xs sm:text-base hover:bg-pink-600 hover:text-pink-600 hover:bg-opacity-10 hover:cursor-pointer hover:rounded-md px-1 py-0.1 sm:px-2 sm:py-1'>#{tag}</p>
             ))} */}
-            </div>
+            {/* </div> */}
 
             {/* Reactions */}
-            <div className='ml-6 my-4 sm:my-0 sm:ml-14 flex gap-4'>
-              <div className='flex'><BiLike className='size-4 sm:size-6 hover:cursor-pointer hover:scale-110' />
+            <div className='ml-6 mt-3 sm:mt-6 sm:ml-14 flex gap-4'>
+              <div className='flex'><BiLike className='size-4 sm:size-6 hover:cursor-pointer hover:scale-110 dark:text-zinc-200' />
                 <p className={`text-xs sm:text-xl  ${unkempt.className}`}>
                   {/* &nbsp;{post.reactions.likes} */}
                 </p>
               </div>
-              <div className='flex'><CgComment className='sm:mt-1 size-4 sm:size-6 hover:cursor-pointer hover:scale-110' />
+              <div className='flex'><CgComment className='sm:mt-1 size-4 sm:size-6 hover:cursor-pointer hover:scale-110 dark:text-zinc-200' />
                 <p className={`text-xs sm:text-xl  ${unkempt.className}`}>
                   {/* &nbsp;{post.reactions.comments} */}
                 </p>
@@ -106,10 +94,11 @@ const Posts = () => {
               </div>
             ))}
           </div> */}
-          </div>
-        </Link>
-      ))}
-    </div>
+          </Link>
+        </div>
+      ))
+      }
+    </div >
   )
 }
 

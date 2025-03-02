@@ -8,7 +8,6 @@ import { useState } from "react";
 export default function Home() {
 
   const [open, setOpen] = useState(false)
-  
 
   return (
     <>

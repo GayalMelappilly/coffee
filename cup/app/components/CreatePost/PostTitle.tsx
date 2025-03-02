@@ -1,24 +1,15 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
-import { Poppins } from "next/font/google";
+import React, { FC, useEffect, useState } from 'react'
+import { poppins, poppinsExtraBoldItalic } from '../Fonts/Fonts';
 import { Hashtags } from '@/app/test/datasets/hashtags';
 
-// type Props = {}
+type Props = {
+    title: string,
+    setTitle: (title: string) => void
+}
 
-const poppins = Poppins({
-    weight: "900",
-    style: 'italic',
-    subsets: ['latin']
-})
-
-const poppins_sm = Poppins({
-    weight: "400",
-    style: 'normal',
-    subsets: ['latin']
-})
-
-const PostTitle = () => {
+const PostTitle:FC<Props> = ({title, setTitle}) => {
 
     const [tags, setTags] = useState<string[]>([])
     const [searchTag, setSearchTag] = useState("")
@@ -47,8 +38,12 @@ const PostTitle = () => {
     }
 
     return (
-        <div className='rounded-md bg-white h-fit w-full shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
-            <textarea name="" id="" rows={2} placeholder='Title here...' className={`resize-none text-6xl outline-none bg-transparent p-10 rounded-md ${poppins.className}`} />
+        <div className='rounded-md bg-white sm:h-fit w-full mb-5 sm:w-8/12 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
+            <textarea name="" id="" rows={2} placeholder='Title here...'
+                className={`resize-none text-2xl sm:text-6xl outline-none bg-transparent p-10 rounded-md ${poppinsExtraBoldItalic.className}`}
+                onChange={(e)=>setTitle(e.target.value)}
+                value={title}
+             />
             <div>
                 <div className='flex p-5 pl-10 pb-5'>
                     {selectedTags.length > 0 && (
@@ -62,7 +57,7 @@ const PostTitle = () => {
                             ))}
                         </div>
                     )}
-                    <input className={`outline-none h-14 w-4/6 p-5 pl-4 pb-8 ${selectedTags.length > 4 ? 'hidden' : 'block'} text-base rounded-md bg-transparent ${poppins_sm.className}`} onChange={(e) => setSearchTag(e.target.value)} value={searchTag} type="text" placeholder={`${selectedTags.length > 0 ? 'Add more...': 'Add upto 5 tags...'}`} />
+                    <input className={`outline-none h-6 sm:h-14 w-4/6 p-5 pl-4 pb-1 sm:pb-8 ${selectedTags.length > 4 ? 'hidden' : 'block'} text-sm sm:text-base rounded-md bg-transparent ${poppins.className}`} onChange={(e) => setSearchTag(e.target.value)} value={searchTag} type="text" placeholder={`${selectedTags.length > 0 ? 'Add more...': 'Add upto 5 tags...'}`} />
                 </div>
                 {tags.length > 0 && (
                     <div className={`max-h-52 w-1/4 ml-10 overflow-y-auto p-2 px-5 pb-2 rounded-md list-none shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]`}>

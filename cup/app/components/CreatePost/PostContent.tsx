@@ -1,17 +1,14 @@
 "use client"
 
-import React, { useRef } from 'react'
-import { Poppins } from "next/font/google";
+import React, { FC, useEffect, useRef } from 'react'
+import { poppinsLightRegular } from '../Fonts/Fonts'; 
 
-// type Props = {}
+type Props = {
+    content: string,
+    setContent: (content: string) => void
+}
 
-const poppins = Poppins({
-    weight: "300",
-    style: 'normal',
-    subsets: ['latin']
-})
-
-const PostContent = () => {
+const PostContent:FC<Props> = ({content, setContent}) => {
 
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -24,13 +21,16 @@ const PostContent = () => {
     };
 
     return (
-        <div className='rounded-md bg-white h-fit w-10/12 mt-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
-            <div className='flex justify-start p-5 px-10'>
-                <p className='opacity-60'>• Use single backticks for `inline code` &nbsp; • Use triple backticks for ```multi-line code blocks```</p>
+        <div className='rounded-md bg-white h-fit w-full mt-5 shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
+            <div className='flex justify-start pt-5 px-10'>
+                <p className='opacity-40 text-xs sm:text-base'>• Use single backticks for `inline code` &nbsp; • Use triple backticks for ```multi-line code blocks```</p>
             </div>
             <textarea name="" id="" placeholder='Content here...' ref={textareaRef}
                 onInput={handleInput}
-                className={`w-11/12 min-h-[50px] resize-none overflow-hidden px-5 m-5 rounded-lg text-black outline-none transition-all duration-200" ${poppins.className}`} />
+                onChange={(e)=>setContent(e.target.value)}
+                value={content}
+                className={`w-11/12 min-h-[50px] resize-none overflow-hidden px-5 m-5 rounded-lg text-black outline-none transition-all duration-200" ${poppinsLightRegular.className}`} 
+            />
         </div>
     )
 }

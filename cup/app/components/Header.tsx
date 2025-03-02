@@ -7,8 +7,13 @@ import { User } from './Icons/User'
 import PublishButton from './Buttons/PublishButton'
 import SidePanel from './Home/SidePanel'
 import { useState } from 'react'
-// import Link from 'next/link'
 import Notification from './Notification/Notification'
+import LightMode from './Icons/LightMode'
+import { MdLightMode } from 'react-icons/md'
+import DarkMode from './Icons/DarkMode'
+import ThemeToggle from './ThemeToggle/ThemeToggle'
+import { useAuth } from '../context/authProvider'
+import Link from 'next/link'
 
 // type Props = {}
 
@@ -17,9 +22,11 @@ const Header = () => {
     const [open, setOpen] = useState(false)
     const [openNotifications, setOpenNotifications] = useState(false)
 
+    const {accessToken, refreshToken} = useAuth()
+
     return (
         <>
-            <div className='flex my-5 w-screen'>
+            <div className={`flex my-5 w-screen ${refreshToken ? "block" : "hidden"}`}>
                 <div className='block sm:hidden'>
                     <SidePanel open={open} setOpen={setOpen} />
                 </div>
@@ -28,6 +35,7 @@ const Header = () => {
                     <SearchBar />
                 </div>
                 <div className='ml-auto flex mx-2 sm:mx-20 sm:ml-auto'>
+                    <ThemeToggle />
                     <PublishButton />
                     <BellRing onClick={()=>setOpenNotifications(!openNotifications)} />
                     { openNotifications && (
@@ -35,7 +43,9 @@ const Header = () => {
                             <Notification />
                         </div>
                     ) }
-                    <User />
+                    <Link href={'/user-profile'}>
+                        <User />
+                    </Link>
                 </div>
             </div>
             <div className='sm:hidden block w-full'>

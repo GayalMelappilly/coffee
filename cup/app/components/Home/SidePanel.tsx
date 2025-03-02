@@ -1,18 +1,13 @@
 'use client'
 
 import React, { FC } from 'react'
-import { Poppins } from 'next/font/google'
+import { poppins } from '../Fonts/Fonts'
 import Image from 'next/image'
 
 type Props = {
     open: boolean,
     setOpen: (open: boolean) => void
 }
-
-const poppins = Poppins({
-    weight: '400',
-    subsets: ["latin"]
-})
 
 const sections = [
     { name: "Home", icon: "home.svg" },
@@ -31,7 +26,7 @@ const SidePanel: FC<Props> = ({ open, setOpen }) => {
 
     return (
         <>
-            <div className='mx-10 mt-10 w-full hidden sm:block bg-zinc-50 bg-opacity-60 p-2 rounded-md shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
+            <div className='mx-10 mt-10 w-full hidden sm:block bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-200 bg-opacity-60 p-2 rounded-md shadow-[0px_0px_10px_0px_rgba(0,_0,_0,_0.19)]'>
                 {sections.map((section, index) => (
                     <div key={index} className='my-2 hover:bg-opacity-10 rounded-md hover:bg-amber-700 hover:scale-105 hover:mx-2 duration-200 p-1 pl-5 py-2 flex hover:text-amber-600 cursor-pointer'>
                         <h1 className={`text-md pl-1 ${poppins.className}`}>{section.name}</h1>

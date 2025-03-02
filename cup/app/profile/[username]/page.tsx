@@ -1,6 +1,7 @@
 "use client"
 
 import SidePanel from '@/app/components/Home/SidePanel';
+import { robotoItalic } from '@/app/components/Fonts/Fonts';
 import { useParams } from 'next/navigation';
 import React, { useState } from 'react'
 
@@ -19,7 +20,7 @@ const Page = () => {
                 <div className="hidden sm:block sm:w-2/12">
                     <SidePanel open={open} setOpen={setOpen} />
                 </div>
-                <h1 className='mt-12 ml-20 text-4xl'>USERNAME  : {username}</h1>
+                <h1 className={`mt-12 ml-24 text-6xl ${robotoItalic.className}`}>{username}</h1>
             </div>
             {/* <Discussions /> */}
         </>
