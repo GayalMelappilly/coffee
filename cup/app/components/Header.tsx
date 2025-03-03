@@ -6,14 +6,15 @@ import { BellRing } from './Icons/BellRing'
 import { User } from './Icons/User'
 import PublishButton from './Buttons/PublishButton'
 import SidePanel from './Home/SidePanel'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Notification from './Notification/Notification'
 import LightMode from './Icons/LightMode'
 import { MdLightMode } from 'react-icons/md'
 import DarkMode from './Icons/DarkMode'
 import ThemeToggle from './ThemeToggle/ThemeToggle'
-import { useAuth } from '../context/authProvider'
 import Link from 'next/link'
+import { useAuth } from '../context/authProvider'
+import { getAccessToken } from '../hooks/getAccessToken'
 
 // type Props = {}
 
@@ -22,11 +23,10 @@ const Header = () => {
     const [open, setOpen] = useState(false)
     const [openNotifications, setOpenNotifications] = useState(false)
 
-    const {accessToken, refreshToken} = useAuth()
-
     return (
         <>
-            <div className={`flex my-5 w-screen ${refreshToken ? "block" : "hidden"}`}>
+            <div className={`flex my-5 w-screen`}>
+            {/* ${accessToken ? "block" : "hidden"} */}
                 <div className='block sm:hidden'>
                     <SidePanel open={open} setOpen={setOpen} />
                 </div>

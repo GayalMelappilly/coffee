@@ -24,8 +24,8 @@ const Signup:FC<Props> = ({username, setUsername, email, setEmail, password, set
             <div className='sm:hidden h-20 absolute w-screen'>
                 <SmallBanner />
             </div>
-            <main className="sm:w-1/2 w-full h-screen p-9 flex flex-col bg-zinc-100 justify-center mt-10">
-                <div className="max-w-sm w-full text-gray-600 space-y-8 mx-auto">
+            <main className="sm:w-1/2 w-full h-screen p-9 flex flex-col bg-zinc-100 justify-center overflow-scroll">
+                <div className="max-w-sm w-full text-gray-600 space-y-8 mx-auto mt-10">
                     <div className="text-center">
                         <div className="mt-5 space-y-2">
                             <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Create an account</h3>

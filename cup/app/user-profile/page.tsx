@@ -5,6 +5,7 @@ import SidePanel from '../components/Home/SidePanel'
 import { robotoItalic, robotoRegular } from '../components/Fonts/Fonts'
 import { useMutation, useQuery } from '@tanstack/react-query'
 import { getCurrentUser } from '@/pages/api/user/action'
+import { cookies } from 'next/headers'
 import { useAuth } from '../context/authProvider'
 
 type Props = {}
@@ -13,13 +14,15 @@ const page = (props: Props) => {
 
     const [open, setOpen] = useState(false)
     const [userData, setUserData] = useState("")
-
-    const { accessToken, refreshToken, setTokens } = useAuth()
+    const [token, setToken] = useState<string>()
 
     const { data, isLoading, isError } = useQuery({
-        queryKey: ['get'],
-        queryFn: () => getCurrentUser(accessToken!),
-        enabled: !!accessToken
+        queryKey: ["current-user"],
+        queryFn: () => getCurrentUser(), 
+    });
+
+    useEffect(()=>{
+        console.log("USER_DATA M: ",data)
     })
 
     return (

@@ -4,6 +4,7 @@ import Background from "./components/Background/Background";
 import Header from "./components/Header";
 import QueryProvider from "./providers/QueryProvider";
 import { AuthProvider } from "./context/authProvider";
+// import { AuthProvider } from "./context/authProvider";
 
 export const metadata: Metadata = {
   title: "",

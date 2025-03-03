@@ -5,24 +5,23 @@ import Banner from '../components/Banner/Banner'
 import Login from '../components/Login/Login'
 import { useMutation } from '@tanstack/react-query'
 import { loginUser } from '@/pages/api/auth/action'
-import { useAuth } from '../context/authProvider'
 import { useRouter } from 'next/navigation'
+import { useAuth } from '../context/authProvider'
 
 // type Props = {}
 
 const page = () => {
 
-    const { accessToken, refreshToken, setTokens } = useAuth()
-
     const [username, setUsername] = useState<string>("")
     const [password, setPassword] = useState<string>("")
+    const {accessToken, setTokens} = useAuth()
 
     const router = useRouter()
 
     const mutation = useMutation({
         mutationFn: loginUser,
         onSuccess: (data) => {
-            setTokens(data.access_token, data.refresh_token)
+            setTokens(data.access_token)
             router.push('/')
         },
         onError:(error) => {

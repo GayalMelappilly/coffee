@@ -26,6 +26,7 @@ export type TypePost = {
 export const getPosts = async () => {
     const res = await fetch(`${process.env.API_URL}/posts`, {
         cache: 'no-store',
+        credentials: "include"
     })
     if (!res.ok) {
         throw new Error('Failed to fetch posts');

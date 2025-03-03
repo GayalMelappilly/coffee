@@ -1,17 +1,19 @@
 "use server"
 
-export const getCurrentUser = async(access_token?: string | null) => {
+import { fetchWithAuth } from "@/app/hooks/fetchWithAuth";
+import { getAccessToken } from "@/app/hooks/getAccessToken";
 
-    if (!access_token) {
-        throw new Error('Access token is required');
-    }
+export const getCurrentUser = async() => {  
 
-    const res = await fetch(`${process.env.API_URL}/current-user/`,{
-        cache: 'no-store',
+    const accessToken = await getAccessToken()
+
+    const res = await fetchWithAuth(`${process.env.API_URL}/current-user/`,{
         headers: {
-            "Authorization":`Bearer ${access_token}`,
-            'Content-Type': 'application/json'
-        }
+            "Content-Type": "application/json",
+            "Authorization" : `Bearer ${accessToken}`,
+        },
+        credentials: "include",
+        cache: 'no-store',
     })
 
     if(!res.ok){
