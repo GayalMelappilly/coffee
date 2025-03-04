@@ -1,5 +1,4 @@
 import { refreshAccessToken } from "@/pages/api/auth/action";
-import { cookies } from "next/headers";
 import { getAccessToken } from "./getAccessToken";
 import { setAccessToken } from "./setAccessToken";
 

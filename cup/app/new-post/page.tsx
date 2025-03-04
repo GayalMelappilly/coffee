@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import PostTitle from '../components/CreatePost/PostTitle'
 import CoverImage from '../components/CreatePost/CoverImage'
 import PostContent from '../components/CreatePost/PostContent'
@@ -10,7 +10,7 @@ import { createPost } from '@/pages/api/post/actions'
 
 // type Props = {}
 
-const page = () => {
+const Page = () => {
 
   const [image, setImage] = useState<string | null>(null);
   const [title, setTitle] = useState<string>("");
@@ -41,4 +41,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

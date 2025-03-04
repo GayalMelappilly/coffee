@@ -1,6 +1,6 @@
 "use client"
 
-import React, { FC, useEffect, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import { poppinsLightRegular } from '../Fonts/Fonts'; 
 
 type Props = {

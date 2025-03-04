@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const Imageloading = (props: Props) => {
+const Imageloading = () => {
     return (
         <div className='flex justify-center pt-4'>
             <Image

@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import React, { FC, useState } from 'react'
-import Loading from '../Loading/Loading';
 import Imageloading from '../Loading/Imageloading';
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
 
 const CoverImage: FC<Props> =  ({image, setImage}) => {
 
-    const [uploading, setUploading] = useState(false);
+    // const [uploading, setUploading] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -23,7 +22,7 @@ const CoverImage: FC<Props> =  ({image, setImage}) => {
         reader.readAsDataURL(file);
         reader.onloadend = async () => {
             const base64Image = reader.result as string;
-            setUploading(true);
+            // setUploading(true);
 
             try {
                 const response = await fetch('/api/image-upload/upload', {
@@ -39,7 +38,7 @@ const CoverImage: FC<Props> =  ({image, setImage}) => {
             } catch (error) {
                 console.error('Error uploading image:', error);
             } finally {
-                setUploading(false);
+                // setUploading(false);
             }
         };
     };

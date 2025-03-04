@@ -6,11 +6,10 @@ import Banner from '../components/Banner/Banner'
 import { useMutation } from '@tanstack/react-query'
 import { registerUser } from '@/pages/api/auth/action'
 import { useRouter } from 'next/navigation'
-import { useAuth } from '../context/authProvider'
 
 // type Props = {}
 
-const page = () => {
+const Page = () => {
 
   const router = useRouter()
 
@@ -57,4 +56,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

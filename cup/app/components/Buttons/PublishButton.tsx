@@ -6,8 +6,6 @@ import Link from 'next/link'
 
 // type Props = {}
 
-
-
 const PublishButton = () => {
     return (
         <div>

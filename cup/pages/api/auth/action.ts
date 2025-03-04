@@ -1,6 +1,6 @@
 "use server"
 
-import { getAccessToken } from "@/app/hooks/getAccessToken"
+// import { getAccessToken } from "@/app/hooks/getAccessToken"
 import { getRefreshToken } from "@/app/hooks/getRefreshToken"
 import { cookies } from "next/headers"
 
@@ -66,11 +66,31 @@ export const loginUser = async (loginData: loginPayload) => {
         path: "/",
     });
 
-    const token = await getAccessToken()
-
     return data
 }
 
+export const logoutUser = async () => {
+    const res = await fetch(`${process.env.API_URL}/logout/`, {
+        // pass refresh
+        method: "POST",
+        credentials: "include"
+    })
+
+    if (!res.ok) {
+        const errorData = await res.json();
+        console.log("ERRRRRROR : ", errorData)
+        throw new Error(JSON.stringify(errorData));
+    }
+
+    const data = await res.json()
+
+    const cookieStore = await cookies()
+
+    cookieStore.delete("access_token")
+    cookieStore.delete("refresh_token")
+
+    return data
+}
 
 // Refresh access token
 

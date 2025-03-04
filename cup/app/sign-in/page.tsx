@@ -6,22 +6,19 @@ import Login from '../components/Login/Login'
 import { useMutation } from '@tanstack/react-query'
 import { loginUser } from '@/pages/api/auth/action'
 import { useRouter } from 'next/navigation'
-import { useAuth } from '../context/authProvider'
 
 // type Props = {}
 
-const page = () => {
+const Page = () => {
 
     const [username, setUsername] = useState<string>("")
     const [password, setPassword] = useState<string>("")
-    const {accessToken, setTokens} = useAuth()
 
     const router = useRouter()
 
     const mutation = useMutation({
         mutationFn: loginUser,
-        onSuccess: (data) => {
-            setTokens(data.access_token)
+        onSuccess: () => {
             router.push('/')
         },
         onError:(error) => {
@@ -48,4 +45,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

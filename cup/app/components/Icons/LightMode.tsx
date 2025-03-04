@@ -1,9 +1,8 @@
-import Image from 'next/image'
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const LightMode = (props: Props) => {
+const LightMode = () => {
     return (
         <div>
             <div className='bg-black bg-opacity-80 rounded-md size-12 p-2 mr-5 stroke-yellow-800'>

@@ -1,29 +1,41 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import SidePanel from '../components/Home/SidePanel'
-import { robotoItalic, robotoRegular } from '../components/Fonts/Fonts'
+import { bebasNeue, robotoItalic, robotoRegular } from '../components/Fonts/Fonts'
 import { useMutation, useQuery } from '@tanstack/react-query'
 import { getCurrentUser } from '@/pages/api/user/action'
-import { cookies } from 'next/headers'
-import { useAuth } from '../context/authProvider'
+import { logoutUser } from '@/pages/api/auth/action'
+import { useRouter } from 'next/navigation'
 
-type Props = {}
+// type Props = {}
 
-const page = (props: Props) => {
+const Page = () => {
 
     const [open, setOpen] = useState(false)
-    const [userData, setUserData] = useState("")
-    const [token, setToken] = useState<string>()
 
-    const { data, isLoading, isError } = useQuery({
+    const router = useRouter()
+
+    const { data } = useQuery({
         queryKey: ["current-user"],
-        queryFn: () => getCurrentUser(), 
+        queryFn: () => getCurrentUser(),
     });
 
-    useEffect(()=>{
-        console.log("USER_DATA M: ",data)
+    const mutation = useMutation({
+        mutationFn: logoutUser,
+        onSuccess: () => {
+            console.log("User logged out")
+            router.push('/login')
+        },
+        onError: (error) => {
+            console.log("Error in logout : ", error)
+        }
     })
+
+    const HandleLogout = (e: React.FormEvent) => {
+        e.preventDefault()
+        mutation.mutate()
+    }
 
     return (
         <>
@@ -32,9 +44,20 @@ const page = (props: Props) => {
                     <SidePanel open={open} setOpen={setOpen} />
                 </div>
                 {data && (
-                    <div>
-                        <h1 className={`mt-12 ml-24 text-6xl ${robotoItalic.className}`}>{data.username}</h1>
-                        <p className={`mt-5 ml-24 text-3xl ${robotoRegular.className}`}>{data.email}</p>
+                    <div className='ml-24'>
+                        <h1 className={`mt-12 text-6xl dark:text-zinc-100 ${robotoItalic.className}`}>{data.username}</h1>
+                        <p className={`mt-5 text-xl dark:text-zinc-100 ${robotoRegular.className}`}>{data.email}</p>
+                        <div className='h-36'>
+
+                        </div>
+                        <div>
+                            <button
+                                className={`rounded-md border-red-600 border-2 py-1 px-3 text-red-600 hover:text-white hover:bg-red-600 text-4xl bott ${bebasNeue.className}`}
+                                onClick={(e) => HandleLogout(e)}
+                            >
+                                Logout
+                            </button>
+                        </div>
                     </div>
                 )}
             </div>
@@ -43,4 +66,4 @@ const page = (props: Props) => {
     )
 }
 
-export default page
+export default Page

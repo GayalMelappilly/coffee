@@ -6,15 +6,10 @@ import { BellRing } from './Icons/BellRing'
 import { User } from './Icons/User'
 import PublishButton from './Buttons/PublishButton'
 import SidePanel from './Home/SidePanel'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Notification from './Notification/Notification'
-import LightMode from './Icons/LightMode'
-import { MdLightMode } from 'react-icons/md'
-import DarkMode from './Icons/DarkMode'
 import ThemeToggle from './ThemeToggle/ThemeToggle'
 import Link from 'next/link'
-import { useAuth } from '../context/authProvider'
-import { getAccessToken } from '../hooks/getAccessToken'
 
 // type Props = {}
 

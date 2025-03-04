@@ -1,11 +1,9 @@
 "use client"
 
-import React, { FC, useState } from 'react'
+import React, { FC } from 'react'
 import SmallBanner from '../Banner/SmallBanner'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useMutation } from '@tanstack/react-query'
-import { registerUser } from '@/pages/api/auth/action'
 
 type Props = {
     username: string,

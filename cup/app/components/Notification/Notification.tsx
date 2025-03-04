@@ -3,7 +3,6 @@ import { poppinsRegular } from '../Fonts/Fonts'
 import { format } from 'timeago.js'
 import { notifications } from '@/app/test/datasets/notifications'
 // import { convertTime } from '@/app/utils/convertTime'
-import Image from 'next/image'
 
 // type Props = {}
 

@@ -1,8 +1,8 @@
 import React from 'react'
 
-type Props = {}
+// type Props = {}
 
-const DarkMode = (props: Props) => {
+const DarkMode = () => {
     return (
         <div className='bg-white bg-opacity-60 rounded-md size-12 p-1 mr-5'>
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"

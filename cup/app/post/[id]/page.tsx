@@ -7,7 +7,7 @@ import { getPost } from '@/pages/api/post/actions';
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import { useParams } from 'next/navigation';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 // type Props = {}
 
@@ -17,7 +17,7 @@ const Page = () => {
     const id = params?.id as string;
 
     const [open, setOpen] = useState(false)
-    const [postDetails, setPostDetails] = useState(null)
+    // const [postDetails, setPostDetails] = useState(null)
 
     const { data, isLoading, isError } = useQuery({
         queryKey: ['post'],
