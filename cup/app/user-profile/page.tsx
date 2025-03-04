@@ -24,8 +24,7 @@ const Page = () => {
     const mutation = useMutation({
         mutationFn: logoutUser,
         onSuccess: () => {
-            console.log("User logged out")
-            router.push('/login')
+            router.push('/sign-in')
         },
         onError: (error) => {
             console.log("Error in logout : ", error)

@@ -1,5 +1,6 @@
 "use server"
 
+import { getAccessToken } from "@/app/hooks/getAccessToken"
 // import { getAccessToken } from "@/app/hooks/getAccessToken"
 import { getRefreshToken } from "@/app/hooks/getRefreshToken"
 import { cookies } from "next/headers"
@@ -66,14 +67,36 @@ export const loginUser = async (loginData: loginPayload) => {
         path: "/",
     });
 
+    cookieStore.set("refresh_token", data.refresh_token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === "production",
+        sameSite: "strict",
+        maxAge: 7 * 24 * 60 * 60,
+        path: "/",
+    });
+
+    console.log("LOGIN_REFRESH_TOKEN : ",data.refresh_token)
+
     return data
 }
 
 export const logoutUser = async () => {
+
+    const accessToken = await getAccessToken()
+    const refreshToken = await getRefreshToken()
+
+    console.log("REFRESH : ",refreshToken)
+    console.log("ACCESS : ",accessToken)
+    
     const res = await fetch(`${process.env.API_URL}/logout/`, {
-        // pass refresh
         method: "POST",
-        credentials: "include"
+        headers: {
+            "Content-Type" : "application/json",
+            "Authorization" : `Bearer ${accessToken}`
+        },
+        body: JSON.stringify({refresh_token: refreshToken}),
+        credentials: "include",
+        cache: 'no-store',
     })
 
     if (!res.ok) {
@@ -82,7 +105,8 @@ export const logoutUser = async () => {
         throw new Error(JSON.stringify(errorData));
     }
 
-    const data = await res.json()
+    const data = await res.text()
+    console.log("USER LOGGED OUT")
 
     const cookieStore = await cookies()
 
@@ -97,6 +121,7 @@ export const logoutUser = async () => {
 export const refreshAccessToken = async () => {
     try {
         const refreshToken = await getRefreshToken()
+        console.log("RT : ",refreshToken)
 
         const res = await fetch(`${process.env.API_URL}/token/refresh/`, {
             method: "POST",
@@ -104,6 +129,7 @@ export const refreshAccessToken = async () => {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({refresh: refreshToken}),
+            credentials: "include"
         });
 
         if (!res.ok) {
