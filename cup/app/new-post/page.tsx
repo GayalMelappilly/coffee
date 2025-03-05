@@ -7,6 +7,7 @@ import PostContent from '../components/CreatePost/PostContent'
 import { bebasNeue } from '../components/Fonts/Fonts'
 import { useMutation } from '@tanstack/react-query'
 import { createPost } from '@/pages/api/post/actions'
+import { useRouter } from 'next/navigation'
 
 // type Props = {}
 
@@ -16,8 +17,16 @@ const Page = () => {
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
 
+  const router = useRouter()
+
   const mutation = useMutation({
-    mutationFn: createPost
+    mutationFn: createPost,
+    onSuccess: ()=>{
+      router.push("/")
+    },
+    onError: (error) => {
+      console.log("An error error while publishing the post.")
+    }
   })
 
   const handlePublish = (e: React.FormEvent) => {
