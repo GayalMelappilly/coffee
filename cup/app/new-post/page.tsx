@@ -25,7 +25,7 @@ const Page = () => {
       router.push("/")
     },
     onError: (error) => {
-      console.log("An error error while publishing the post.")
+      console.log("An error error while publishing the post : ",error)
     }
   })
 
